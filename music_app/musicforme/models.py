@@ -1,20 +1,15 @@
-from django.contrib.auth.models import User
 from django.db import models
 
 
-class CustomUser(User):
-    # name = User.CharField(max_length=60)
-    city = models.CharField(max_length=60)
-    country = models.CharField(max_length=56)
-    address = models.CharField(max_length=50)
-    age = models.IntegerField()
+class MusicalInstrument(models.Model):
+    family = models.CharField(max_length=30)
+    name = models.CharField(max_length=30)
 
 
-class Teacher(models.Model):
+class Ad(models.Model):
     pass
-    # name
-    # city
-    # country
-    # address
-    # phone number
+
+
+class Messages(models.Model):
+    pass
 
