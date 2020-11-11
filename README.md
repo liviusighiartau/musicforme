@@ -9,7 +9,8 @@ Each section has it's own particulaty.
 ## General info
 
 ## Technologies
-
+Python 3.8
+Django 3.1
 ## Project Setup
 
 Make sure the file always includes the following elements:
