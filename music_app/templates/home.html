@@ -4,8 +4,20 @@
 
 {% block content %}
 {% if user.is_authenticated %}
+  <p><a href="{% url 'create-post' %}">Create post</a></p>
   Hi {{ user.username }}!
   <p><a href="{% url 'logout' %}">Log Out</a></p>
+  <p><a href="{% url 'edit-account' user.id %}">Edit profile</a></p>
+  <p><a href="{% url 'display-posts' %}">Show posts</a></p>
+  {% if posts %}
+    {% for post in posts %}
+      <p>{{post.publish_date}}</p>
+      <p>{{post.title}}</p>
+      <p>{{post.author}}</p>
+      <p>{{post.musical_instrument}}</p>
+      <p>{{post.content}}</p>
+    {% endfor %}
+  {% endif %}
 {% else %}
   <p>You are not logged in</p>
   <a href="{% url 'login' %}">Log In</a> |
