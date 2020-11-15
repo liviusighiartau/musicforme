@@ -1,12 +1,8 @@
-{% extends 'base.html' %}
+{% extends 'form_base.html' %}
 
 {% block title %}User Details{% endblock %}
+{% block form-title %}User Details{% endblock %}
 
-{% block content %}
-<h2>User details</h2>
-<form method="post">
-  {% csrf_token %}
-  {{ form.as_p }}
-  <button type="submit">Submit</button>
-</form>
+{% block form-button %}
+  <button type="submit" class="btn btn-success">Submit</button>
 {% endblock %}

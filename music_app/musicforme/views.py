@@ -8,7 +8,7 @@ from musicforme.models import Post
 
 def display_posts(request):
     posts = Post.objects.all()
-    return render(request, 'home.html', {'posts': posts})
+    return render(request, 'posts/display_posts.html', {'posts': posts})
 
 
 def create_post(request, **kwargs):
