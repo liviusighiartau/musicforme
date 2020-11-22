@@ -125,7 +125,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
-    ("images", BASE_DIR / "static"),
+    (BASE_DIR / "static"),
 ]
 
 # Authentication and user login

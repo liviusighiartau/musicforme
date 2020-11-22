@@ -16,6 +16,9 @@
                     <p class="card-text mb-2 text-muted">
                         Musical instrument: {{post.musical_instrument}}
                     </p>
+                    {% if post.author_id == user.id%}
+                        <a type="button" class="btn btn-secondary" href="{% url 'edit-post' user.id post.id %}">Edit post</a>
+                    {% endif %}
                 </div>
             </div>
         {% endfor %}
