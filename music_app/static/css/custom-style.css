@@ -1,0 +1,30 @@
+body {
+    background-color: #f0efeb;
+    font-family: Book Antiqua;
+}
+
+nav {
+    background-color: #264653;
+}
+
+.carousel, img {
+    height: 650px;
+}
+
+.carousel {
+    border-radius: 55px 55px 55px 55px;
+    overflow: hidden;
+}
+
+.btn {
+    background-color: #2a9d8f;
+}
+
+.nav-item {
+    font-size: 125%;
+}
+
+
+.navbar-brand {
+    font-size: 150%;
+}
