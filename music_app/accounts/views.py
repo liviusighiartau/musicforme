@@ -1,5 +1,5 @@
 from django.http import HttpResponseRedirect
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.urls import reverse, reverse_lazy
 from django.views.generic import CreateView
 
@@ -15,7 +15,7 @@ class SignUpView(CreateView):
 
 def edit_account_view(request, **kwargs):
     account_id = kwargs['account_id']
-    user = CustomUser.objects.get(id=account_id)
+    user = get_object_or_404(CustomUser, id=account_id)
     if request.method == 'POST':
         form = CustomUserForm(request.POST)
         if form.is_valid():
